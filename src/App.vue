@@ -1,29 +1,11 @@
+<script setup>
+import PageHeader from "./components/templates/PageHeader.vue";
+import PageFooter from "./components/templates/PageFooter.vue";
+</script>
 <template>
-  <header id="header">
-    <div class="navbar">
-      <span class="nav-item">
-        <RouterLink to="/times">Times</RouterLink>
-      </span>
-      <span class="nav-item">
-        <RouterLink to="/jogadores">Times</RouterLink>
-      </span>
-    </div>
-  </header>
+  <PageHeader />
   <RouterView />
-  <footer id="footer">
-    <div class="footer-social">
-      <span class="social-item">Instagram</span>
-      <span class="social-item">Twitter</span>
-    </div>
-    <div class="footer-social">
-      <span class="social-item">Instagram</span>
-      <span class="social-item">Twitter</span>
-    </div>
-    <div class="footer-social">
-      <span class="social-item">Instagram</span>
-      <span class="social-item">Twitter</span>
-    </div>
-  </footer>
+  <PageFooter />
 </template>
 <style>
 * {
@@ -43,78 +25,5 @@
     "header"
     "main"
     "footer";
-}
-
-#header {
-  grid-area: header;
-  display: flex;
-  flex-direction: row;
-  align-items: stretch;
-  justify-content: center;
-
-  background-color: rgb(50, 80, 160);
-  font-size: 1.3em;
-}
-.navbar {
-  display: flex;
-  flex-direction: row;
-  align-items: stretch;
-  justify-content: space-evenly;
-  flex-grow: 1;
-}
-.nav-item {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  flex-grow: 1;
-
-  border-bottom: 2px ridge black;
-  cursor: pointer;
-}
-.nav-item:hover {
-  background-color: rgb(0, 0, 0, 0.1);
-  border-bottom: 2px ridge darkred;
-}
-#main {
-  grid-area: main;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 2vh;
-
-  background-color: black;
-  color: white;
-  font-size: 1em;
-}
-.block {
-  padding: 1vh;
-  border: purple 6px groove;
-}
-#footer {
-  grid-area: footer;
-  display: flex;
-  flex-direction: row;
-  align-items: stretch;
-  justify-content: space-evenly;
-  padding: 5px;
-
-  background-color: rgb(50, 80, 160);
-  font-size: 1.2em;
-}
-.footer-social {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-}
-.social-item {
-  border-bottom: 2px ridge black;
-  cursor: pointer;
-}
-.social-item:hover {
-  color: rgb(30, 30, 30);
-  border-bottom: 2px ridge darkred;
 }
 </style>
