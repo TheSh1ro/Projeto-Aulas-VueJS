@@ -1,8 +1,12 @@
 <template>
   <header id="header">
+    <img src="" alt="Logo" />
     <ul class="navbar">
-      <li class="nav-item">Jogadores</li>
-      <li class="nav-item">Times</li>
+      <RouterLink />
+      <RouterLink />
+    </ul>
+    <ul>
+      <li>Account</li>
     </ul>
   </header>
   <RouterView />
@@ -19,51 +23,47 @@
   margin: 0px;
 }
 #app {
-  font-size: 16px;
   height: 100vh;
   width: 100vw;
 
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 10vh auto 8vh;
+  grid-template-rows: 10vh 1fr auto;
   grid-template-areas:
     "header"
-    "content"
+    "main"
     "footer";
+
+  font-size: 16px;
 }
 
 #header {
-  grid-area: "header";
+  grid-area: header;
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
 
   font-size: 1.3em;
-  background-color: darkred;
+  background-color: rgb(21, 123, 163);
 }
 .navbar {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
-  flex-grow: 1;
-  height: 100%;
+  background-color: rgb(21, 123, 0);
 }
 .nav-item {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
-  height: 100%;
+  color: black;
 }
 .nav-item:hover {
   cursor: pointer;
   background-color: rgba(0, 0, 0, 0.2);
 }
 
-#content {
-  grid-area: "content";
+#main {
+  grid-area: main;
   display: flex;
   flex-direction: row;
 
@@ -72,30 +72,32 @@
 }
 
 #footer {
-  grid-area: "footer";
+  grid-area: footer;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
 
   font-size: 1.3em;
-  background-color: darkred;
+  background-color: rgb(21, 123, 163);
 }
 .footerbar {
+  height: 100%;
+
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
   flex-grow: 1;
-  height: 100%;
 }
 .footer-item {
+  height: 100%;
+
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   flex-grow: 1;
-  height: 100%;
 }
 .footer-item:hover {
   cursor: pointer;
