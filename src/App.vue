@@ -1,19 +1,24 @@
 <template>
   <header id="header">
-    <img src="" alt="Logo" />
-    <ul class="navbar">
-      <RouterLink />
-      <RouterLink />
-    </ul>
-    <ul>
-      <li>Account</li>
-    </ul>
+    <div class="navbar">
+      <span class="nav-item">Teams</span>
+      <span class="nav-item">Players</span>
+    </div>
   </header>
   <RouterView />
   <footer id="footer">
-    <ul class="footerbar">
-      <li class="footer-item">Sobre</li>
-    </ul>
+    <div class="footer-social">
+      <span class="social-item">Instagram</span>
+      <span class="social-item">Twitter</span>
+    </div>
+    <div class="footer-social">
+      <span class="social-item">Instagram</span>
+      <span class="social-item">Twitter</span>
+    </div>
+    <div class="footer-social">
+      <span class="social-item">Instagram</span>
+      <span class="social-item">Twitter</span>
+    </div>
   </footer>
 </template>
 <style>
@@ -23,84 +28,86 @@
   margin: 0px;
 }
 #app {
+  font-size: 16px;
   height: 100vh;
   width: 100vw;
 
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 10vh 1fr auto;
+  grid-template-rows: 7vh auto 8vh;
   grid-template-areas:
     "header"
     "main"
     "footer";
-
-  font-size: 16px;
 }
 
 #header {
   grid-area: header;
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
+  align-items: stretch;
+  justify-content: center;
 
+  background-color: rgb(50, 80, 160);
   font-size: 1.3em;
-  background-color: rgb(21, 123, 163);
 }
 .navbar {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: stretch;
   justify-content: space-evenly;
-  background-color: rgb(21, 123, 0);
+  flex-grow: 1;
 }
 .nav-item {
-  color: black;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+
+  border-bottom: 2px ridge black;
+  cursor: pointer;
 }
 .nav-item:hover {
-  cursor: pointer;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgb(0, 0, 0, 0.1);
+  border-bottom: 2px ridge darkred;
 }
-
 #main {
   grid-area: main;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
   background-color: black;
-  color: wheat;
+  color: white;
+  font-size: 1em;
 }
-
+.block {
+  padding: 1vh;
+  border: purple 5px groove;
+}
 #footer {
   grid-area: footer;
   display: flex;
   flex-direction: row;
+  align-items: stretch;
   justify-content: space-evenly;
-  align-items: center;
+  padding: 5px;
 
-  font-size: 1.3em;
-  background-color: rgb(21, 123, 163);
+  background-color: rgb(50, 80, 160);
+  font-size: 0.95em;
 }
-.footerbar {
-  height: 100%;
-
+.footer-social {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  flex-grow: 1;
 }
-.footer-item {
-  height: 100%;
-
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
-}
-.footer-item:hover {
+.social-item {
   cursor: pointer;
-  background-color: rgba(0, 0, 0, 0.2);
+}
+.social-item:hover {
+  color: rgb(30, 30, 30);
 }
 </style>
