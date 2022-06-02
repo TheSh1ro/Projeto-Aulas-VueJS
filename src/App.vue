@@ -1,8 +1,12 @@
 <template>
   <header id="header">
     <div class="navbar">
-      <span class="nav-item">Teams</span>
-      <span class="nav-item">Players</span>
+      <span class="nav-item">
+        <RouterLink to="/times">Times</RouterLink>
+      </span>
+      <span class="nav-item">
+        <RouterLink to="/jogadores">Times</RouterLink>
+      </span>
     </div>
   </header>
   <RouterView />
@@ -78,6 +82,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 2vh;
 
   background-color: black;
   color: white;
@@ -96,7 +101,7 @@
   padding: 5px;
 
   background-color: rgb(50, 80, 160);
-  font-size: 0.95em;
+  font-size: 1.2em;
 }
 .footer-social {
   display: flex;
@@ -105,9 +110,11 @@
   justify-content: space-evenly;
 }
 .social-item {
+  border-bottom: 2px ridge black;
   cursor: pointer;
 }
 .social-item:hover {
   color: rgb(30, 30, 30);
+  border-bottom: 2px ridge darkred;
 }
 </style>
