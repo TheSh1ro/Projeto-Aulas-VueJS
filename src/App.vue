@@ -85,7 +85,7 @@
 }
 .block {
   padding: 1vh;
-  border: purple 5px groove;
+  border: purple 6px groove;
 }
 #footer {
   grid-area: footer;
