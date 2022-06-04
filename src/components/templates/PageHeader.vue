@@ -8,8 +8,8 @@ export default {};
       <p>WebSite</p>
     </RouterLink>
     <nav class="header-navbar">
-      <RouterLink to="/times" class="header-navbar-item">Times</RouterLink>
       <RouterLink to="/" class="header-navbar-item">Home</RouterLink>
+      <RouterLink to="/times" class="header-navbar-item">Times</RouterLink>
       <RouterLink to="/jogadores" class="header-navbar-item">Jogadores</RouterLink>
     </nav>
   </header>
@@ -22,9 +22,7 @@ export default {};
   align-items: stretch;
   justify-content: space-around;
 
-  font-size: 1.2em;
-  background-color: rgb(50, 80, 160);
-  border-bottom: 2px solid black;
+  border-bottom: 2px groove white;
 }
 .header-logo {
   display: flex;
@@ -33,7 +31,7 @@ export default {};
   gap: 5px;
 }
 .header-logo > img {
-  align-self: stretch;
+  height: 30px;
 }
 .header-navbar {
   display: flex;
@@ -44,11 +42,12 @@ export default {};
   display: flex;
   align-items: center;
   padding: 0px 40px;
-  border-bottom: 2px solid black;
+  
+  border-bottom: 2px groove white;
   margin-bottom: -2px;
 }
 .header-navbar-item:hover {
   background-color: rgba(0, 0, 0, 0.1);
-  border-bottom: 2px solid red;
+  border-bottom: 2px groove red;
 }
 </style>
