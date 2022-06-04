@@ -9,9 +9,12 @@ import PageFooter from "./components/templates/PageFooter.vue";
 </template>
 <style>
 * {
-  list-style-type: none;
   padding: 0px;
   margin: 0px;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: inherit;
+  list-style-type: none;
 }
 #app {
   font-size: 16px;

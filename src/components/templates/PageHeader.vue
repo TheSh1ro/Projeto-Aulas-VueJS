@@ -3,11 +3,15 @@ export default {};
 </script>
 <template>
   <header id="header">
-    <div class="navbar">
-      <RouterLink to="/times" class="nav-item">Times</RouterLink>
-      <RouterLink to="/" class="nav-item">Home</RouterLink>
-      <RouterLink to="/jogadores" class="nav-item">Jogadores</RouterLink>
-    </div>
+    <RouterLink to="/" class="header-logo">
+      <img src="../icons/icone.png" alt="Logo" />
+      <p>WebSite</p>
+    </RouterLink>
+    <nav class="header-navbar">
+      <RouterLink to="/times" class="header-navbar-item">Times</RouterLink>
+      <RouterLink to="/" class="header-navbar-item">Home</RouterLink>
+      <RouterLink to="/jogadores" class="header-navbar-item">Jogadores</RouterLink>
+    </nav>
   </header>
 </template>
 <style scoped>
@@ -16,36 +20,35 @@ export default {};
   display: flex;
   flex-direction: row;
   align-items: stretch;
-  justify-content: center;
+  justify-content: space-around;
 
+  font-size: 1.2em;
   background-color: rgb(50, 80, 160);
-  font-size: 1.3em;
+  border-bottom: 2px solid black;
 }
-.navbar {
+.header-logo {
+  display: flex;
+  align-items: center;
+  padding: 1vh;
+  gap: 5px;
+}
+.header-logo > img {
+  align-self: stretch;
+}
+.header-navbar {
   display: flex;
   flex-direction: row;
   align-items: stretch;
-  justify-content: space-evenly;
-  flex-grow: 1;
 }
-.nav-item {
+.header-navbar-item {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  flex-grow: 1;
-
-  border-bottom: 2px ridge black;
-
-  cursor: pointer;
-  text-decoration: none;
-  color: inherit;
+  padding: 0px 40px;
+  border-bottom: 2px solid black;
+  margin-bottom: -2px;
 }
-.nav-item:nth-child(2) {
-  border-inline: 2px solid black;
-}
-.nav-item:hover {
-  background-color: rgb(0, 0, 0, 0.1);
-  border-bottom: 2px ridge darkred;
+.header-navbar-item:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-bottom: 2px solid red;
 }
 </style>

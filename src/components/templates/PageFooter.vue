@@ -3,18 +3,16 @@ export default {};
 </script>
 <template>
   <footer id="footer">
-    <div class="footer-social">
-      <span class="social-item">Instagram</span>
-      <span class="social-item">Twitter</span>
-    </div>
-    <div class="footer-social">
-      <span class="social-item">Telefone</span>
-      <span class="social-item">@E-mail</span>
-    </div>
-    <div class="footer-social">
-      <span class="social-item">Parceiros</span>
-      <span class="social-item">Organizadores</span>
-    </div>
+    <nav class="footer-navbar">
+      <a class="footer-navbar-item">Contato</a>
+      <a class="footer-navbar-item">Telefone</a>
+      <a class="footer-navbar-item">Email</a>
+    </nav>
+    <nav class="footer-navbar">
+      <a class="footer-navbar-item">Sobre</a>
+      <a class="footer-navbar-item">Fundação</a>
+      <a class="footer-navbar-item">Projeto</a>
+    </nav>
   </footer>
 </template>
 <style scoped>
@@ -23,24 +21,10 @@ export default {};
   display: flex;
   flex-direction: row;
   align-items: stretch;
-  justify-content: space-evenly;
-  padding: 5px;
+  justify-content: space-around;
+  padding: 0.5em;
 
   background-color: rgb(50, 80, 160);
   font-size: 1.2em;
-}
-.footer-social {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-}
-.social-item {
-  border-bottom: 2px ridge black;
-  cursor: pointer;
-}
-.social-item:hover {
-  color: rgb(30, 30, 30);
-  border-bottom: 2px ridge darkred;
 }
 </style>
