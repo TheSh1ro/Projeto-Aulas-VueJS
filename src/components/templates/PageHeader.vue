@@ -42,7 +42,7 @@ export default {};
   display: flex;
   align-items: center;
   padding: 0px 40px;
-  
+
   border-bottom: 2px groove white;
   margin-bottom: -2px;
 }

@@ -8,7 +8,6 @@ import PageFooter from "./components/templates/PageFooter.vue";
   <PageFooter />
 </template>
 <style>
-
 /*Pre-sets*/
 
 * {
@@ -23,7 +22,7 @@ import PageFooter from "./components/templates/PageFooter.vue";
 
 html, body, #app {
   min-height: 100vh;
-  max-width: 100%
+  max-width: 100%;
 }
 
 /*Scrollbar css*/
@@ -34,7 +33,7 @@ html, body, #app {
 ::-webkit-scrollbar-thumb {
   background: rgb(55, 55, 55);
   border-radius: 0px;
-  padding:10px;
+  padding: 10px;
 }
 
 ::-webkit-scrollbar-track {
@@ -64,9 +63,9 @@ html, body, #app {
 }
 
 #main {
-   background-color: rgb(0, 0, 0);
-   color: whitesmoke;
-   font-size: 1em;
+  background-color: rgb(0, 0, 0);
+  color: whitesmoke;
+  font-size: 1em;
 }
 
 #footer {
@@ -74,5 +73,4 @@ html, body, #app {
   color: yellow;
   font-size: 1em;
 }
-
 </style>

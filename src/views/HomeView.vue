@@ -1,38 +1,42 @@
 <template>
   <main id="main">
-    <img class="home-image" src="https://i.ytimg.com/vi/yFOdkyaoUTg/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDsYakMSnJ7MduNMOJseBUEA0olDQ">
+    <img
+      class="home-image"
+      src="https://i.ytimg.com/vi/yFOdkyaoUTg/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDsYakMSnJ7MduNMOJseBUEA0olDQ"
+    />
     <section class="home-about">
       <div class="main-introduction">
-        <h1 class="container-title">Quem somos
-        </h1>
-        <p class="introduction-text">Para facilitar a interação e possibilitar a contratação de jogadores, ou mesmo a criação de times, sentimos a necessidade de surgir no mercado
+        <h1 class="container-title">Quem somos</h1>
+        <p class="introduction-text">
+          Para facilitar a interação e possibilitar a contratação de jogadores,
+          ou mesmo a criação de times, sentimos a necessidade de surgir no
+          mercado
         </p>
       </div>
-    
+
       <div class="main-description">
-        <h1 class="container-title">
-        O que posso fazer?
-        </h1>
+        <h1 class="container-title">O que posso fazer?</h1>
         <ul class="description-advantages">
           <h2>Caso você seja dono de um time, ou queira iniciar seu projeto</h2>
           <li>Crie seu time</li>
           <li>Gerencie seu time</li>
           <li>Encontre novos jogadores</li>
         </ul>
-        <hr>
+        <hr />
         <ul class="description-advantages">
           <h2>Caso você seja um atleta</h2>
           <li>Ingresse em um time</li>
           <li>Conheça os times</li>
-          <li>Se coloque a disposição para participar de outros times como Free Agent</li>
+          <li>
+            Se coloque a disposição para participar de outros times como Free
+            Agent
+          </li>
         </ul>
       </div>
     </section>
-    
   </main>
 </template>
 <style scoped>
-
 #main {
   grid-area: main;
   display: flex;
@@ -88,9 +92,8 @@
 .container-title {
   align-self: stretch;
   padding: 1em;
-  text-align: center;  
+  text-align: center;
   color: black;
-  background: rgb(200,200,0);
+  background: rgb(200, 200, 0);
 }
-
 </style>
