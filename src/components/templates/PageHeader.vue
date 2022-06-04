@@ -5,6 +5,7 @@ export default {};
   <header id="header">
     <div class="navbar">
       <RouterLink to="/times" class="nav-item">Times</RouterLink>
+      <RouterLink to="/" class="nav-item">Home</RouterLink>
       <RouterLink to="/jogadores" class="nav-item">Jogadores</RouterLink>
     </div>
   </header>
@@ -29,13 +30,19 @@ export default {};
 }
 .nav-item {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   flex-grow: 1;
 
   border-bottom: 2px ridge black;
+
   cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+.nav-item:nth-child(2) {
+  border-inline: 2px solid black;
 }
 .nav-item:hover {
   background-color: rgb(0, 0, 0, 0.1);

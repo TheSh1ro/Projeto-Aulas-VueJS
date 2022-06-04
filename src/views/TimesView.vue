@@ -1,6 +1,20 @@
 <template>
   <main id="main">
-    <section class="block">Página times</section>
+    <div class="cadastro">
+      <h1>Cadastrar time</h1>
+      <section class="form-block">
+        <input type="text" />
+        <span>Nome do time</span>
+      </section>
+      <section class="form-block">
+        <input type="text" />
+        <span>País de origem</span>
+      </section>
+      <section class="form-block">
+        <input type="text" />
+        <span>Cidade de origem</span>
+      </section>
+    </div>
   </main>
 </template>
 <style scoped>
@@ -9,15 +23,22 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding: 2vh;
+  justify-content: flex-start;
+  padding: 5vh;
 
   background-color: black;
   color: white;
   font-size: 1em;
 }
-.block {
-  padding: 1vh;
-  border: purple 6px groove;
+.cadastro {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.form-block {
+  display: flex;
+  flex-direction: row;
+
+  background-color: rgba(0, 255, 255, 0.281);
 }
 </style>

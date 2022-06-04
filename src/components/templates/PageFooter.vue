@@ -8,12 +8,12 @@ export default {};
       <span class="social-item">Twitter</span>
     </div>
     <div class="footer-social">
-      <span class="social-item">Instagram</span>
-      <span class="social-item">Twitter</span>
+      <span class="social-item">Telefone</span>
+      <span class="social-item">@E-mail</span>
     </div>
     <div class="footer-social">
-      <span class="social-item">Instagram</span>
-      <span class="social-item">Twitter</span>
+      <span class="social-item">Parceiros</span>
+      <span class="social-item">Organizadores</span>
     </div>
   </footer>
 </template>

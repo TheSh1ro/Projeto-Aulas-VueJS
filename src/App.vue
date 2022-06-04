@@ -20,7 +20,7 @@ import PageFooter from "./components/templates/PageFooter.vue";
 
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 7vh auto 8vh;
+  grid-template-rows: 8vh auto 8vh;
   grid-template-areas:
     "header"
     "main"
