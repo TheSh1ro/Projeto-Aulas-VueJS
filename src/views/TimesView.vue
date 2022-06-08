@@ -35,7 +35,7 @@ export default {
             <tr v-for="time in times" :key="time.id">
               <td>{{ time.id }}</td>
               <td>{{ time.name }}</td>
-              <td>???</td>
+              <td>Ação</td>
             </tr>
           </tbody>
         </table>
@@ -95,5 +95,9 @@ table tbody tr {
 table tbody tr:nth-child(odd) {
   color: white;
   background-color: rgb(80, 80, 80);
+}
+table > tbody > td,
+th {
+  padding: 5px;
 }
 </style>

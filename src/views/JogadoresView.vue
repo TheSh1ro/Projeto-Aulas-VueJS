@@ -1,39 +1,47 @@
+<script>
+export default {
+  data() {
+    return {
+      times: [
+        { id: 1, name: "Jogador 1", timeid: 1 },
+        { id: 2, name: "Jogador 2", timeid: 2 },
+        { id: 3, name: "Jogador 3", timeid: 3 },
+        { id: 4, name: "Jogador 4", timeid: 4 },
+      ],
+    };
+  },
+};
+</script>
 <template>
   <main id="main">
-    <div class="title">
-      <h2>Gerenciamenato de Times</h2>
-    </div>
-    <div class="form-input">
-      <input type="text" />
-      <button>Salvar</button>
-    </div>
-    <div class="list-times">
-      <table>
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Nome</th>
-            <th>Ações</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>1</td>
-            <td>Time 1</td>
-            <td>???</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>Time 2</td>
-            <td>???</td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>Time 3</td>
-            <td>???</td>
-          </tr>
-        </tbody>
-      </table>
+    <div class="form">
+      <div class="form-title">
+        <h1>Gerenciamento de jogadores</h1>
+      </div>
+      <div class="form-input">
+        <input type="text" placeholder="Insira o time" />
+        <button>Ok</button>
+      </div>
+      <div class="form-view">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nome</th>
+              <th>Time ID</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="time in times" :key="time.id">
+              <td>{{ time.id }}</td>
+              <td>{{ time.name }}</td>
+              <td>{{ time.timeid }}</td>
+              <td>Ação</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </main>
 </template>
@@ -42,7 +50,7 @@
   grid-area: main;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
   justify-content: flex-start;
   padding: 5vh;
 
@@ -50,8 +58,44 @@
   color: white;
   font-size: 1em;
 }
-.cadastro {
+.form {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  flex-grow: 1;
+}
+.form-input {
+  display: flex;
+  align-items: stretch;
+  color: black;
+}
+.form-input > input {
+  text-align: center;
+}
+.form-input > button {
+  padding: 5px;
+}
+.form-view {
+  align-self: stretch;
+}
+table {
+  width: 50%;
+  border-collapse: collapse;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  text-align: center;
+}
+table thead {
+  font-weight: bold;
+  background-color: rgb(35, 35, 35);
+}
+table tbody tr {
+  color: black;
+  background-color: rgb(160, 160, 160);
+}
+table tbody tr:nth-child(odd) {
+  color: white;
+  background-color: rgb(80, 80, 80);
 }
 </style>
