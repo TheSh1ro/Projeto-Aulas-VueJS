@@ -1,19 +1,45 @@
+<script>
+export default {
+  data() {
+    return {
+      times: [
+        { id: 1, name: "Time 1" },
+        { id: 2, name: "Time 2" },
+        { id: 3, name: "Time 3" },
+        { id: 4, name: "Time 4" },
+      ],
+    };
+  },
+};
+</script>
 <template>
   <main id="main">
-    <div class="cadastro">
-      <h1>Cadastrar time</h1>
-      <section class="form-block">
-        <input type="text" />
-        <span>Nome do time</span>
-      </section>
-      <section class="form-block">
-        <input type="text" />
-        <span>País de origem</span>
-      </section>
-      <section class="form-block">
-        <input type="text" />
-        <span>Cidade de origem</span>
-      </section>
+    <div class="form">
+      <div class="form-title">
+        <h1>Gerenciamento de times</h1>
+      </div>
+      <div class="form-input">
+        <input type="text" placeholder="Insira o time" />
+        <button>Ok</button>
+      </div>
+      <div class="form-view">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nome</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="time in times" :key="time.id">
+              <td>{{ time.id }}</td>
+              <td>{{ time.name }}</td>
+              <td>???</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </main>
 </template>
@@ -22,7 +48,7 @@
   grid-area: main;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
   justify-content: flex-start;
   padding: 5vh;
 
@@ -30,15 +56,44 @@
   color: white;
   font-size: 1em;
 }
-.cadastro {
+.form {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  align-items: center;
+  gap: 20px;
+  flex-grow: 1;
 }
-.form-block {
+.form-input {
   display: flex;
-  flex-direction: row;
-
-  background-color: rgba(0, 255, 255, 0.281);
+  align-items: stretch;
+  color: black;
+}
+.form-input > input {
+  text-align: center;
+}
+.form-input > button {
+  padding: 5px;
+}
+.form-view {
+  align-self: stretch;
+}
+table {
+  width: 50%;
+  border-collapse: collapse;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  text-align: center;
+}
+table thead {
+  font-weight: bold;
+  background-color: rgb(35, 35, 35);
+}
+table tbody tr {
+  color: black;
+  background-color: rgb(160, 160, 160);
+}
+table tbody tr:nth-child(odd) {
+  color: white;
+  background-color: rgb(80, 80, 80);
 }
 </style>
