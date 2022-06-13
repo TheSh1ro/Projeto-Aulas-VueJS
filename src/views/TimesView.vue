@@ -1,14 +1,32 @@
 <script>
+// import { v4 as uuid } from "uuid";
 export default {
   data() {
     return {
       times: [
-        { id: 1, name: "Time 1" },
-        { id: 2, name: "Time 2" },
-        { id: 3, name: "Time 3" },
-        { id: 4, name: "Time 4" },
+        { id: "ab0b59c9-c846-4349-904f-ba5d1cf53329", name: "Time 1" },
+        { id: "1262e7a2-6ba2-405a-8ca6-044a3406afd0", name: "Time 2" },
+        { id: "f5df0e90-d169-4f4f-aae3-721c03e03e59", name: "Time 3" },
+        { id: "b5f66fe8-a9fc-4eb6-a26f-f690ff0512df", name: "Time 4" },
       ],
     };
+  },
+
+  methods: {
+    salvar() {
+      if (this.novo_time != "") {
+        // const novo_id = uuid();
+        this.times.push({
+          id: "b5f66fe8-a9fc-4eb6-a26f-f690ff0512df",
+          name: this.novo_time,
+        });
+        this.novo_time = "";
+      }
+    },
+    excluir(time) {
+      const indice = this.times.indexOf(time);
+      this.times.splice(indice, 1);
+    },
   },
 };
 </script>
@@ -19,8 +37,8 @@ export default {
         <h1>Gerenciamento de times</h1>
       </div>
       <div class="form-input">
-        <input type="text" placeholder="Insira o time" />
-        <button>Ok</button>
+        <input type="text" v-model="novo_time" placeholder="Insira o time" />
+        <button @click="salvar">Ok</button>
       </div>
       <div class="form-view">
         <table>
@@ -35,7 +53,10 @@ export default {
             <tr v-for="time in times" :key="time.id">
               <td>{{ time.id }}</td>
               <td>{{ time.name }}</td>
-              <td>Ação</td>
+              <td>
+                <button @click="alerta">Excluir</button>
+                <button>Editar</button>
+              </td>
             </tr>
           </tbody>
         </table>
@@ -44,6 +65,9 @@ export default {
   </main>
 </template>
 <style scoped>
+button {
+  color: black;
+}
 #main {
   grid-area: main;
   display: flex;
